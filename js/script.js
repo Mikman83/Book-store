@@ -71,34 +71,35 @@ ready(function(){
   const cardsWrap = document.querySelector('.catalog__list');
 
   function createCards(object) {
-    const memberArr = object.books;
-    let cardString = '';
+    const card = document.createElement('div');
+    card.classList.add('product-card-mini');
 
-    memberArr.forEach(function(book) {
-      cardString = cardString + `<article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">${book.title}</a>
+    card.innerHTML =`<h2 class="product-card-mini__title">
+            <a href="${object.href}">${object.title}</a>
           </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="${book.src}" alt="" class="product-card-mini__img">
+          <a href="${object.href}" class="product-card-mini__img-wrap">
+            <img src="${object.src}" alt="some picture" class="product-card-mini__img">
           </a>
-          <p class="product-card-mini__descr">${book.descr}</p>
-          <div class="product-card-mini__price">${book.price}</div>
-        </article>`;
-    });
+          <p class="product-card-mini__descr">${object.descr}</p>
+          <div class="product-card-mini__price">${object.price}</div>`;
 
-    return cardString;
+    return card;
   }
 
 
   function insertElements(object, wrap) {
-    const html = createCards(object);
+    const membersArr = object.books;
+    membersArr.forEach((object) =>{
+      const card = createCard(object);
 
-    wrap.innerHTML = html;
+      wrap.appendChild(card);
+    })
+
+    // wrap.innerHTML = html;
   }
 
-  insertElements(data, cardsWrap);
-
-
+  if (cardsWrap) {
+    insertElemets(data, cardsWrap);
+  }
 
 });

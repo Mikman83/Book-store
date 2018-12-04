@@ -90,16 +90,14 @@ ready(function(){
   function insertElements(object, wrap) {
     const membersArr = object.books;
     membersArr.forEach((object) =>{
-      const card = createCard(object);
+      const card = createCards(object);
 
       wrap.appendChild(card);
     })
-
-    // wrap.innerHTML = html;
   }
 
   if (cardsWrap) {
-    insertElemets(data, cardsWrap);
+    insertElements(data, cardsWrap);
   }
 
 });

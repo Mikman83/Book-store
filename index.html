@@ -2,6 +2,7 @@
 <html lang="ru" class="no-js  page">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Книжный интернет-магазин BOOK STORE</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
@@ -27,7 +28,7 @@
             <a href="#" class="main-nav__link">Рекомендации</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Контакты</a>
+            <a href="contacts.html" class="main-nav__link">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -78,23 +79,21 @@
     <h1 class="catalog__title">Каталог</h1> <!-- скрытый заголовок -->
 
     <div class="catalog__tabs-wrap">
-      <ul class="catalog__tabs">
+      <ul class="catalog__tabs j-tabs">
         <li class="catalog__tab-item">
-          <a href="#" class="catalog__tab-link">Все</a>
+          <a href="#" data-type="all" class="catalog__tab-link">Все</a>
         </li>
         <li class="catalog__tab-item">
-          <a href="#" class="catalog__tab-link">Маркетинг</a>
+          <a href="#" data-type="creativity" class="catalog__tab-link">Маркетинг</a>
         </li>
         <li class="catalog__tab-item">
-          <a href="#" class="catalog__tab-link">Научпоп</a>
-        </li>
-          <a href="#" class="catalog__tab-link">Бизнес</a>
+          <a href="#" data-type="science" class="catalog__tab-link">Научпоп</a>
         </li>
         <li class="catalog__tab-item">
-          <a href="#" class="catalog__tab-link">Творчество</a>
+          <a href="#" data-type="business" class="catalog__tab-link">Бизнес</a>
         </li>
         <li class="catalog__tab-item">
-          <a href="#" class="catalog__tab-link">Менеджмент</a>
+          <a href="#" data-type="creativity" class="catalog__tab-link">Творчество</a>
         </li>
       </ul>
     </div>
@@ -102,7 +101,7 @@
     <div class="catalog__list-wrap">
       <div class="catalog__list">
 
-        <article class="product-card-mini">
+        <!-- <article class="product-card-mini">
           <h2 class="product-card-mini__title">
             <a href="#">Латеральная логика</a>
           </h2>
@@ -188,9 +187,37 @@
           </a>
           <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
           <div class="product-card-mini__price">500 ₽</div>
-        </article>
+        </article> -->
 
       </div>
+    </div>
+
+    <div class="catalog-pagination">
+
+      <ul class="pagination-list">
+        <li class="pagination-list__item">
+          <a href="#">1</a>
+        </li>
+        <li class="pagination-list__item">
+          <a href="#">2</a>
+        </li>
+        <li class="pagination-list__item">
+          <a href="#">3</a>
+        </li>
+        <li class="pagination-list__item">
+          <a href="#">4</a>
+        </li>
+        <li class="pagination-list__item">
+          <a href="#">5</a>
+        </li>
+        <li class="pagination-list__item">
+          <a href="#">...</a>
+        </li>
+        <li class="pagination-list__item">
+          <a href="#">10</a>
+        </li>
+      </ul>
+
     </div>
 
   </section>
@@ -304,6 +331,6 @@
     </div>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+import addPage from './modules/addPage.js';
+import bookCardTemplate from './modules/bookCardTemplate.js';
+import bookData from './modules/bookData.js';
+import sendRequest from './modules/sendRequest.js';
+// import createElement from './modules/createElement.js';
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){
     fn();
@@ -7,97 +12,51 @@ function ready(fn) {
 }
 
 ready(function(){
-  const data ={
-    books: [
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      },
-      {
-        src: '/img/books_all/45-tatuirovok-prodavana.png',
-        title: '45 Татуировок продавана',
-        descr: 'Правила для тех, кто продает и управляет продажами',
-        price: '500 ₽',
-        href: '#'
-      }
-    ]
-  };
 
-  const cardsWrap = document.querySelector('.catalog__list');
-
-  function createCards(object) {
-    const card = document.createElement('article');
-    card.classList.add('product-card-mini');
-
-    card.innerHTML =`<h2 class="product-card-mini__title">
-        <a href="${object.href}">${object.title}</a>
-      </h2>
-      <a href="${object.href}" class="product-card-mini__img-wrap">
-        <img src="${object.src}" alt="some picture" class="product-card-mini__img">
-      </a>
-      <p class="product-card-mini__descr">${object.descr}</p>
-      <div class="product-card-mini__price">${object.price}</div>`;
-
-    return card;
-  }
-
-
-  function insertElements(object, wrap) {
-    const membersArr = object.books;
-    membersArr.forEach((object) =>{
-      const card = createCards(object);
-
-      wrap.appendChild(card);
-    })
-  }
-
-  if (cardsWrap) {
-    insertElements(data, cardsWrap);
-  }
+  addPage(bookData.books, bookCardTemplate);
 
 });
+// Объект данных для AJAX запроса
+const data = {
+  page: 1,
+  perPage: 1,
+  type: ''
+};
+
+sendRequest(createDataAjax(), function(data){
+  console.log(data);
+});
+
+// вешаем слушатель на табы
+const tabsWrap = document.querySelector('.j-tabs');
+const tabsArray = Array.from(tabsWrap.children);
+
+tabsArray.forEach(function(tab){
+ const link = tab.firstElementChild;
+
+ link.addEventListener('click', function(event){
+  event.preventDefault();
+  data.type = event.target.dataset.type;
+
+  // if (window.matchMedia("(min-width: 768px)").matches) {
+  //   data.perPage = 8;
+  // } else {
+  //   data.perPage = 3;
+  // }
+
+  const dataAjax = createDataAjax();
+  sendRequest(dataAjax);
+ });
+
+});
+// агинация
+function createDataAjax() {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    data.perPage = 8;
+  } else {
+    data.perPage = 3;
+  }
+
+  return `https://api.do-epixx.ru/htmlpro/bookstore/books/get/${data.page}/${data.perPage}/${data.type}`;
+}
+

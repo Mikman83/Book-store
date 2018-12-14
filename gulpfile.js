@@ -15,6 +15,10 @@ const rename = require('gulp-rename');
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 
+const ghpages = require('gh-pages');
+const path = require('path');
+
+
 function styles() {
   return src(`${dir.src}scss/style.scss`)
     .pipe(plumber())
@@ -85,6 +89,11 @@ function clean() {
   return del(dir.build)
 }
 exports.clean = clean;
+
+function deploy(cb) {
+  ghpages.publish(path.join(process.cwd(), dir.build), cb);
+}
+exports.deploy = deploy;
 
 function serve() {
   browserSync.init({

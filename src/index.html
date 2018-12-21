@@ -8,6 +8,8 @@
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
   </script>
+  <script src="js/svg4everybody.min.js"></script>
+  <script>svg4everybody();</script>
 </head>
 <body>
 
@@ -99,97 +101,7 @@
     </div>
 
     <div class="catalog__list-wrap">
-      <div class="catalog__list">
-
-        <!-- <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Путеводитель по лжи</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Критическое мышление в эпоху постправды</p>
-          <div class="product-card-mini__price">630 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article>
-
-        <article class="product-card-mini">
-          <h2 class="product-card-mini__title">
-            <a href="#">Латеральная логика</a>
-          </h2>
-          <a href="#" class="product-card-mini__img-wrap">
-            <img src="#" alt="" class="product-card-mini__img">
-          </a>
-          <p class="product-card-mini__descr">Головоломный путь к нестандартному мышлению</p>
-          <div class="product-card-mini__price">500 ₽</div>
-        </article> -->
-
-      </div>
+      <div class="catalog__list"></div>
     </div>
 
     <div class="catalog-pagination">
@@ -231,7 +143,9 @@
     <div class="conditions__list">
 
       <div class="conditions__item">
-        <img src="#" alt="Иконка" class="conditions__item-img">
+        <svg width="48" height="48">
+          <use xlink:href="img/sprite.svg#icon-book"></use>
+        </svg>
         <p class="conditions__item-descr">Покупаете книги на сайте в любимом формате — бумажные, электрон</p>
       </div>
 

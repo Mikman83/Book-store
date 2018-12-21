@@ -1,6 +1,9 @@
 import addPage from './modules/addPage.js';
 import bookCardTemplate from './modules/bookCardTemplate.js';
 import sendRequest from './modules/sendRequest.js';
+// import svg4everybody from 'svg4everybody.js';
+
+// svg4everybody();
 // import createElement from './modules/createElement.js';
 function ready(fn) {
   if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading"){

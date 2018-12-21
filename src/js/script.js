@@ -1,6 +1,5 @@
 import addPage from './modules/addPage.js';
 import bookCardTemplate from './modules/bookCardTemplate.js';
-import bookData from './modules/bookData.js';
 import sendRequest from './modules/sendRequest.js';
 // import createElement from './modules/createElement.js';
 function ready(fn) {

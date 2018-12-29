@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Книжный интернет-магазин BOOK STORE</title>
+  <title>Рекомендации интернет-магазина BOOK STORE</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script>
     document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
@@ -12,6 +12,7 @@
 <body>
 
   <header class="page-header">
+
     <div class="page-header__inner">
 
       <a href="index.html" class="logo"><img src="#" alt="book store"></a>
@@ -21,19 +22,24 @@
       <nav class="main-nav">
         <button class="main-nav__toggle">Главное меню</button>
         <ul class="main-nav__list">
+
           <li class="main-nav__item">
             <a href="card_inner.html" class="main-nav__link">Книги</a>
           </li>
+
           <li class="main-nav__item">
-            <a href="recommendations.html" class="main-nav__link">Рекомендации</a>
+            <a href="recommendations.html" class="main-nav__link main-nav__link--active">Рекомендации</a>
           </li>
+
           <li class="main-nav__item">
             <a href="contacts.html" class="main-nav__link">Контакты</a>
           </li>
+
         </ul>
       </nav>
 
     </div>
+
   </header>
 
   <section class="recommendations">
@@ -134,9 +140,24 @@
       <div class="catalog__list"></div>
 
     </div>
+
   </section>
 
-  <section class="library"></section>
+  <section class="library">
+
+    <div class="library__inner">
+
+      <div class="library__title">
+        <h3>Мы открыли для вас уютную библиотеку</h3>
+      </div>
+
+      <div class="library__descr">
+        <p>Приходите к нам по адресу Никитская 10, каждый день с 12:00 до </p>
+      </div>
+
+    </div>
+
+  </section>
 
   <footer class="page-footer">
     <div class="page-footer__inner">
@@ -151,7 +172,7 @@
             <a href="#" class="main-nav__link">Книги</a>
           </li>
           <li class="main-nav__item">
-            <a href="#" class="main-nav__link">Рекомендации</a>
+            <a href="#" class="main-nav__link main-nav__link--active">Рекомендации</a>
           </li>
           <li class="main-nav__item">
             <a href="#" class="main-nav__link">Контакты</a>

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import addPage from './modules/addPage.js';
 import bookCardTemplate from './modules/bookCardTemplate.js';
 import sendRequest from './modules/sendRequest.js';
@@ -14,10 +15,16 @@ function ready(fn) {
 }
 
 ready(function(){
+  // addPage(bookData.books, bookCardTemplate);
+  $('.main-nav').on('click', function(e) {
+    e.preventDefault;
+    $(this).toggleClass('main-nav--active');
+    $('.main-nav__list').toggleClass('main-nav__list--active');
+  });
 
-  addPage(bookData.books, bookCardTemplate);
 
 });
+
 // Объект данных для AJAX запроса
 const data = {
   page: 1,

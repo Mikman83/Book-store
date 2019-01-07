@@ -1,0 +1,14 @@
+.page-header {
+
+  background-color: #fff;
+
+  &__inner {
+    padding: 15px 30px;
+  }
+
+  &__basket {
+    position: absolute;
+    top: 15px;
+    right: 65px;
+  }
+}

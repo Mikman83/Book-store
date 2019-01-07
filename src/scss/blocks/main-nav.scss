@@ -1,0 +1,52 @@
+.main-nav {
+  // position: relative;
+
+  &__toggle,
+  &__toggle:before,
+  &__toggle:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 5px;
+    right: 30px;
+    border: 0;
+    background-color: #000;
+  }
+
+  &__toggle:before {
+    // top: -6px;
+    right: 0;
+    // transform: translateY(-20px);
+    transition: 0.5s;
+  }
+
+  &__toggle:after {
+    // top: 6px;
+    right: 0;
+    // transform: translateY(-30px);
+    transition: 0.5s;
+  }
+
+  &--active &__toggle {
+    height: 0;
+    padding: 0;
+    top: 0;
+  }
+
+  &--active &__toggle:before {
+    transform: rotate(45deg);
+  }
+
+  &--active &__toggle:after {
+    transform: rotate(-45deg);
+  }
+
+  &__list {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

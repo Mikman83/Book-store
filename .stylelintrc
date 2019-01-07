@@ -12,9 +12,6 @@
     "color-no-invalid-hex": [true, {
       "message": "HEX цвета правильно написаны быть должны"
     }],
-    "font-family-name-quotes": ["always-where-recommended", {
-      "message": "В кавычки шрифта название брать следует"
-    }],
     "font-weight-notation": ["numeric", {
       "message": "Плотность — цифрой: https://goo.gl/58eKi7",
       ignore: ["relative"]

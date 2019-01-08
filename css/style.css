@@ -1,4 +1,335 @@
+@-ms-viewport {
+  width: device-width; }
+
+@-o-viewport {
+  width: device-width; }
+
+@viewport {
+  width: device-width; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../src/fonts/montserrat-v12-latin_cyrillic-ext-500.woff2") format("woff2"), url("../src/fonts/montserrat-v12-latin_cyrillic-ext-500.woff") format("woff");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../src/fonts/montserrat-v12-latin_cyrillic-ext-500italic.woff2") format("woff2"), url("../src/fonts/montserrat-v12-latin_cyrillic-ext-500italic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic; }
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../src/fonts/montserrat-v12-latin_cyrillic-ext-700.woff2") format("woff2"), url("../src/fonts/montserrat-v12-latin_cyrillic-ext-700.woff") format("woff");
+  font-weight: 700;
+  font-style: normal; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  min-height: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #231f20;
+  word-break: break-word; }
+
+[tabindex='-1']:focus {
+  outline: none !important; }
+
+[role='button'] {
+  cursor: pointer; }
+
+input[type='search'] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield; }
+
+a,
+button,
+[role='button'],
+input,
+label,
+select,
+textarea {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  margin: 0; }
+
+button,
+input {
+  overflow: visible;
+  text-transform: none; }
+
+button,
+html [type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button; }
+
+button:focus,
+[type='button']:focus,
+[type='reset']:focus,
+[type='submit']:focus {
+  padding: 0;
+  border-style: none; }
+
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'] {
+  -webkit-appearance: listbox;
+     -moz-appearance: listbox;
+          appearance: listbox; }
+
+textarea {
+  overflow: auto;
+  resize: vertical; }
+
+svg {
+  fill: currentColor; }
+  a svg,
+  button svg {
+    pointer-events: none; }
+  svg:not(:root) {
+    overflow: hidden; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+a {
+  background-color: transparent;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 18px;
+  color: #232323;
+  text-decoration: none; }
+  a:hover, a:focus {
+    outline: 0;
+    text-decoration: none; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: currentColor; }
+
+h1,
+h2,
+h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+h4,
+h5,
+h6 {
+  margin-top: 1em;
+  margin-bottom: 0.5em; }
+
+h1 {
+  font-size: 72px; }
+
+h2 {
+  font-size: 64px; }
+
+h3 {
+  font-size: 36px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+p,
+ul,
+ol,
+dl,
+table,
+blockquote,
+pre,
+address,
+figure {
+  margin-top: 0;
+  margin-bottom: 1em; }
+
+address {
+  font-style: normal; }
+
+ul,
+ol {
+  padding-left: 1.5em; }
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+li {
+  line-height: inherit; }
+
+dt {
+  font-weight: 700; }
+
+dd {
+  margin-left: 0; }
+
+hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid #000; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 80%; }
+
+mark {
+  background: #ff0;
+  padding: 0.1em 0.3em; }
+
+b,
+strong {
+  font-weight: bolder; }
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; }
+
+blockquote {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace; }
+
+code {
+  padding: 0.06em 0.3em;
+  color: #231f20;
+  background-color: #fff;
+  border-radius: 0; }
+
+kbd {
+  padding: 0.06em 0.3em;
+  color: #231f20;
+  background-color: #fff;
+  border-radius: 0; }
+  kbd kbd {
+    padding: 0; }
+
+pre {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -moz-tab-size: 2;
+    -o-tab-size: 2;
+       tab-size: 2; }
+
 .page {
-  font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif; }
+  font-family: "Montserrat", sans-serif; }
+
+.page-header {
+  background-color: #fff; }
+  .page-header__inner {
+    padding: 15px 30px; }
+  .page-header__basket {
+    position: absolute;
+    top: 15px;
+    right: 65px; }
+
+.main-time {
+  display: none; }
+
+.main-nav__toggle, .main-nav__toggle:before, .main-nav__toggle:after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  top: 25px;
+  right: 30px;
+  border: 0;
+  background-color: #000;
+  font-size: 0;
+  color: transparent; }
+
+.main-nav__toggle:before {
+  right: 0;
+  -webkit-transform: translateY(-20px);
+          transform: translateY(-20px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.main-nav__toggle:after {
+  right: 0;
+  -webkit-transform: translateY(-30px);
+          transform: translateY(-30px);
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+
+.main-nav--active .main-nav__toggle {
+  height: 0;
+  padding: 0;
+  top: 0; }
+
+.main-nav--active .main-nav__toggle:before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.main-nav--active .main-nav__toggle:after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.main-nav__list {
+  display: none;
+  position: absolute;
+  width: 200px;
+  height: 140px;
+  right: 10px;
+  top: 50px;
+  background-color: rgba(244, 212, 228, 0.5); }
+  .main-nav__list ul {
+    list-style: none;
+    padding-left: 0; }
+  .main-nav__list--active {
+    display: block; }
+
+.main-nav__tel {
+  position: inherit;
+  color: #1a1ff7;
+  z-index: 10; }
 
 /*# sourceMappingURL=style.css.map */

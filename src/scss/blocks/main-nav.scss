@@ -1,52 +1,61 @@
 .main-nav {
-  // position: relative;
 
-  &__toggle,
-  &__toggle:before,
-  &__toggle:after {
-    content: '';
+  &__toggle {
     position: absolute;
-    width: 20px;
-    height: 2px;
-    top: 25px;
-    right: 30px;
+    width: 30px;
+    height: 30px;
+    top: 10px;
+    right: 25px;
     border: 0;
-    background-color: #000;
-    font-size: 0;
     color: transparent;
+    background-color: transparent;
   }
 
-  &__toggle:before {
-    // top: -6px;
+  &__toggle span,
+  &__toggle span:before,
+  &__toggle span:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    width: 20px;
+    height: 2px;
+    font-size: 0;
+    background-color: #000;
+  }
+
+  &__toggle span:before {
+    top: 13px;
     right: 0;
     transform: translateY(-20px);
     transition: 0.5s;
   }
 
-  &__toggle:after {
-    // top: 6px;
+  &__toggle span:after {
+    top: 37px;
     right: 0;
     transform: translateY(-30px);
     transition: 0.5s;
   }
 
-  &--active &__toggle {
+  &--active &__toggle span {
     height: 0;
     padding: 0;
     top: 0;
   }
 
-  &--active &__toggle:before {
+  &--active &__toggle span:before {
     transform: rotate(45deg);
   }
 
-  &--active &__toggle:after {
+  &--active &__toggle span:after {
     transform: rotate(-45deg);
   }
 
   &__list {
     display: none;
     position: absolute;
+    list-style: none;
     width: 200px;
     height: 140px;
     right: 10px;
@@ -55,7 +64,6 @@
 
     & ul {
       list-style: none;
-      padding-left: 0;
     }
 
     &--active {
